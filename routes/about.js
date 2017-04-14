@@ -4,10 +4,10 @@ router.get('/', async function (ctx, next) {
   ctx.state = {
     title: 'koa2 title',
     name: '231231',
-    pageName: 'index'
+    pageName: 'about'
   };
-
-  await ctx.render('index', {
+  
+  await ctx.render('about', {
     title: "Test Page",
     name: "World"
   });

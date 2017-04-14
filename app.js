@@ -10,6 +10,10 @@ const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
 
 const index = require('./routes/index');
+const about = require('./routes/about');
+const service = require('./routes/service');
+const contact = require('./routes/contact');
+
 const users = require('./routes/users');
 
 // middlewares
@@ -25,7 +29,42 @@ app.use(hbs.middleware({
   extname: '.html',
   disableCache: process.env.NODE_ENV === 'development'
 }));
+hbs.registerHelper('link', function(text, url) {
+  text = hbs.Utils.escapeExpression(text);
+  url  = hbs.Utils.escapeExpression(url);
 
+  var result = '<a href="' + url + '">' + text + '</a>';
+
+  return new hbs.SafeString(result);
+});
+hbs.registerHelper('compare', function(left, operator, right, options) {
+   if (arguments.length < 3) {
+     throw new Error('Handlerbars Helper "compare" needs 2 parameters');
+   }
+   var operators = {
+     '==':     function(l, r) {return l == r; },
+     '===':    function(l, r) {return l === r; },
+     '!=':     function(l, r) {return l != r; },
+     '!==':    function(l, r) {return l !== r; },
+     '<':      function(l, r) {return l < r; },
+     '>':      function(l, r) {return l > r; },
+     '<=':     function(l, r) {return l <= r; },
+     '>=':     function(l, r) {return l >= r; },
+     'typeof': function(l, r) {return typeof l == r; }
+   };
+
+   if (!operators[operator]) {
+     throw new Error('Handlerbars Helper "compare" doesn\'t know the operator ' + operator);
+   }
+
+   var result = operators[operator](left, right);
+
+   if (result) {
+     return options.fn(this);
+   } else {
+     return options.inverse(this);
+   }
+});
 // logger
 app.use(async (ctx, next) => {
   const start = new Date();
@@ -35,6 +74,9 @@ app.use(async (ctx, next) => {
 });
 
 router.use('/', index.routes(), index.allowedMethods());
+router.use('/about', about.routes(), index.allowedMethods());
+router.use('/service', service.routes(), index.allowedMethods());
+router.use('/contact', contact.routes(), index.allowedMethods());
 router.use('/users', users.routes(), users.allowedMethods());
 
 app.use(router.routes(), router.allowedMethods());

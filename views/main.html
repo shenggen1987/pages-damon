@@ -23,23 +23,45 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">原本设计</a>
+		      <a class="navbar-brand" href="/">原本设计</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav" id="menu">
-		        <li class="active"><a href="#page1">首页 <span class="sr-only">(current)</span></a></li>
-		        <li><a href="#">案例</a></li>
-				    <li><a href="#">全部</a></li>
-				    <li><a href="#">品牌</a></li>
+		       
+						{{#compare pageName '==' 'index'}}
+					     <li class="active"><a href="#">案例 <span class="sr-only">(current)</span></a></li>
+					     {{else}}
+					     <li><a href="/">案例</a></li>
+					 {{/compare}}
+		        <!-- <li><a href="#">案例</a></li> -->
+				    {{#compare pageName '==' 'about'}}
+					     <li class="active"><a href="#">关于 <span class="sr-only">(current)</span></a></li>
+					     {{else}}
+					     <li><a href="/about">关于</a></li>
+					 {{/compare}}
+
+					 {{#compare pageName '==' 'service'}}
+					     <li class="active"><a href="#">服务 <span class="sr-only">(current)</span></a></li>
+					     {{else}}
+					     <li><a href="/service">服务</a></li>
+					 {{/compare}}
+
+					 {{#compare pageName '==' 'contact'}}
+					     <li class="active"><a href="#">联系 <span class="sr-only">(current)</span></a></li>
+					     {{else}}
+					     <li><a href="/contact">联系</a></li>
+					 {{/compare}}
+				    
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
 	
-
-    {{{body}}}
+		<div class="mian">
+			{{{body}}}
+		</div>
   </body>
   <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
   <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
