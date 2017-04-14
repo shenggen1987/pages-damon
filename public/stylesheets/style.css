@@ -1,0 +1,34 @@
+a {
+  color: #00B7FF;
+}
+
+// .header-nav{
+//   height: 40px;
+//   padding: 30px;
+//   width: 100%;
+//   z-index: 9970;
+//   margin: 0 auto;
+// }
+// .logo{
+//   line-height: 40px;
+// }
+// .nav{
+//   float: right;
+// }
+// .nav li{
+//   list-style: none;
+//   display: inline-block;
+//   padding: 0 10px;
+  
+// }
+// .nav li a{
+//   color: #ccc;
+// }
+
+.navbar{
+	margin-bottom: 0;
+	border-radius: 0;
+	    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
