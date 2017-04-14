@@ -6,7 +6,6 @@ router.get('/', async function (ctx, next) {
     name: '231231',
     pageName: 'about'
   };
-  
   await ctx.render('about', {
     title: "Test Page",
     name: "World"

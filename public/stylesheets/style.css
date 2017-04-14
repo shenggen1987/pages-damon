@@ -35,3 +35,19 @@ a {
 .mian{
 	padding-top: 60px;
 }
+
+/*** about **/
+.about .banner{
+	width: 100%;
+	background: url('/images/about.png');
+	margin: 0 auto;
+}
+.container1{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 10px;
+}
+.container1 img{
+	width: 100%;
+}
