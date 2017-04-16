@@ -1,1 +1,59 @@
-contact.html
+<div class="container contact">
+	
+
+ 	<div class="row list-teams">
+ 		<div class="col-xs-12 col-sm-12 col-md-12 team container1">
+        <div id="allmap"></div>
+    </div>
+
+	</div>
+
+	<div class="row info">
+	   	<div class="col-xs-12 col-sm-12 col-md-12 f1">
+					<p><strong>本源品牌设计顾问</strong></p>
+					<p>___</p>
+					<p>&nbsp;</p>
+					<p><strong>深圳福田保税区市花路福年广场6B栋235室</strong></p>
+					<p>P.C 518000</p>
+					<p>Tel 0755-82459890</p>
+					<p>E-Mail info@originbrand.cn</p>
+					<p>Web www.originbrand.cn</p>
+	   	</div>
+  </div>
+</div>
+{{#contentFor "footerJS"}}
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=G7h0sKsr60IFU3OrHRmKTRzD"></script>
+  <script type="text/javascript">
+  	//oQudttzTdPOgn4GPIr62ZHYQzMZXWmuk
+		// 百度地图API功能
+
+		var vPoint = "114.06482,22.512444";
+    var points = vPoint.split(',');
+
+		var map = new BMap.Map("allmap");    // 创建Map实例
+		map.centerAndZoom(new BMap.Point(points[0], points[1]), 15);  // 初始化地图,设置中心点坐标和地图级别
+		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+		map.enableScrollWheelZoom();    //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+
+
+
+
+		var point = new BMap.Point(points[0], points[1]);
+        var myIcon = new BMap.Icon("http://banana001.w221.mc-test.com/Content/img/marker.png", new BMap.Size(48, 72));
+        var marker1 = new BMap.Marker(point, { icon: myIcon });  // 创建标注
+     //   var marker1 = new BMap.Marker(point); 
+        map.addOverlay(marker1);              // 将标注添加到地图中
+        // marker1.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+        var sContent =
+    "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>本原设计</h4>" +
+    "<p>地址：深圳福田保税区市花路福年广场6B栋235室<br/>" +
+    "电话：0755-82459890" +
+    "</div>";
+
+    var infoWindow1 = new BMap.InfoWindow(sContent);
+        marker1.addEventListener("click", function () { this.openInfoWindow(infoWindow1); });
+
+
+	</script>
+{{/contentFor}}

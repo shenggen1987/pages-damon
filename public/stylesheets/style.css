@@ -48,6 +48,9 @@ a {
   align-items: center;
   padding: 10px;
 }
+.about .container1{
+	padding-bottom: 30px;
+}
 .about .container1 img{
 	width: 100%;
 }
@@ -63,4 +66,13 @@ a {
 }
 .service .item .title{
 	font-size: 16px;
+}
+
+
+#allmap{
+	height: 500px;
+	width: 100%;
+}
+.contact .info{
+	padding-bottom: 40px;
 }
