@@ -3,9 +3,10 @@
 {{/contentFor}}
 
 
+
 <div id="container" class="container">    
  	<div class="col-xs-12 col-sm-12 col-md-12 ">
-        	 <div class="item w1 h1"><img src="/images/loading.gif" data-original="/images/index_01.png" ></div>  
+        	 <div class="item w1 h1"><img src="/images/loading.gif" data-original="/images/index_01.png"></div>  
 					 <div class="item w2 h2"><img src="/images/loading.gif" data-original="/images/index_02.png"></div> 
 					 <div class="item w3 h3"><img src="/images/loading.gif" data-original="/images/index_03.png"></div>  
 					 <div class="item w2 h4"><img src="/images/loading.gif" data-original="/images/index_04.png"></div> 
@@ -42,11 +43,7 @@
 					 <div class="item w3 h30"><img src="/images/loading.gif" data-original="/images/index_30.png"></div>
 
  </div>
- 
-  
-  
- 
-  
+
 </div> 
 
 {{#contentFor "footerJS"}}
@@ -55,30 +52,35 @@
   <script>
 		$(function(){    
 		  
-			f_masonry();
-			$("img").lazyload({
-				effect:"fadeIn",
-				failurelimit:40,
-				load:f_masonry,
-			});
 
-			function f_masonry() {
-				function detectmob() {
-	          return navigator.userAgent.match(/Android/i)
-	                  || navigator.userAgent.match(/webOS/i)
-	                  || navigator.userAgent.match(/iPhone/i)
-	                  || navigator.userAgent.match(/BlackBerry/i)
-	                  || navigator.userAgent.match(/Windows Phone/i);
-	      }
-	      if (detectmob()) {
-	        $('#container').masonry({singleMode: true,animate: true,itemSelector:'.item'}); 
-	      }else{
-	      	$('#container').masonry({singleMode: true,animate: true,itemSelector:'.item', isFitWidth: true, columnWidth: 200});  
-	      }
-			}
+			setTimeout(function(){
+				$("body").css("overflow", "auto");
+				$("body").removeClass("o-hide");
+				$(".pre-loading").hide();
 
-			
 
+				f_masonry();
+				$("img").lazyload({
+					effect:"fadeIn",
+					failurelimit:40,
+					load:f_masonry,
+				});
+
+				function f_masonry() {
+					function detectmob() {
+		          return navigator.userAgent.match(/Android/i)
+		                  || navigator.userAgent.match(/webOS/i)
+		                  || navigator.userAgent.match(/iPhone/i)
+		                  || navigator.userAgent.match(/BlackBerry/i)
+		                  || navigator.userAgent.match(/Windows Phone/i);
+		      }
+		      if (detectmob()) {
+		        $('#container').masonry({singleMode: true,animate: true,itemSelector:'.item'}); 
+		      }else{
+		      	$('#container').masonry({singleMode: true,animate: true,itemSelector:'.item', isFitWidth: true, columnWidth: 200});  
+		      }
+				}
+			}, 1000);
 
 		});  
 	</script>

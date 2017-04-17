@@ -76,3 +76,6 @@ a {
 .contact .info{
 	padding-bottom: 40px;
 }
+.pre-loading{
+	display: none;
+}
