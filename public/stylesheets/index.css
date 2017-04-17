@@ -4,7 +4,11 @@
 .item {   
   margin: 10px; 
   float: left;    
-}  
+} 
+.item .small{   
+  width: 100%;  
+  height: 100%;  
+}   
 // body{
 	// overflow: hidden;
 // }
