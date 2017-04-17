@@ -5,9 +5,9 @@
   margin: 10px; 
   float: left;    
 }  
-body{
-	overflow: hidden;
-}
+// body{
+	// overflow: hidden;
+// }
 
 
 @media screen and (max-width: 760px){

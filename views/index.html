@@ -51,13 +51,13 @@
 	<script src='//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js'></script>
   <script>
 		$(function(){    
-		  
+		  // $("body").css("overflow", "auto");
 
 			setTimeout(function(){
-				$("body").css("overflow", "auto");
-				$("body").removeClass("o-hide");
-				$(".pre-loading").hide();
-
+				
+				// $("body").removeClass("o-hide");
+				
+				var isLoading = false;
 
 				f_masonry();
 				$("img").lazyload({
@@ -78,6 +78,10 @@
 		        $('#container').masonry({singleMode: true,animate: true,itemSelector:'.item'}); 
 		      }else{
 		      	$('#container').masonry({singleMode: true,animate: true,itemSelector:'.item', isFitWidth: true, columnWidth: 200});  
+		      }
+		      if(!isLoading){
+		      	$(".pre-loading").hide();
+		      	isLoading = true;
 		      }
 				}
 			}, 1000);
