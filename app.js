@@ -13,6 +13,7 @@ const index = require('./routes/index');
 const about = require('./routes/about');
 const service = require('./routes/service');
 const contact = require('./routes/contact');
+const detail = require('./routes/detail');
 
 const users = require('./routes/users');
 
@@ -25,6 +26,7 @@ app.use(require('koa-static')(__dirname + '/public'));
 const hbs = require('koa-hbs');
 app.use(hbs.middleware({
   viewPath: __dirname + '/views',
+  partialsPath: __dirname + '/views/partials',
   defaultLayout: 'main',
   extname: '.html',
   disableCache: process.env.NODE_ENV === 'development'
@@ -78,7 +80,7 @@ router.use('/about', about.routes(), index.allowedMethods());
 router.use('/service', service.routes(), index.allowedMethods());
 router.use('/contact', contact.routes(), index.allowedMethods());
 router.use('/users', users.routes(), users.allowedMethods());
-
+router.use('/detail', detail.routes(), detail.allowedMethods());
 app.use(router.routes(), router.allowedMethods());
 // response
 
