@@ -107,6 +107,8 @@
 .o-hide{
 	overflow: hidden;
 }
+
+
 .preloader{
 	width: 100%;
 	height: 100%;
@@ -116,24 +118,101 @@
   padding: 10px;
  }
  .preloader_txt{
- 	color: #ff9400;
+ 	text-align: center;
+ 	color: #fff;
  	font-size: 36px;
  	font-weight: 700;
- 	background: #fff -webkit-linear-gradient(left, #fff, #ff9400) 0 0 no-repeat;
-    -webkit-background-size: 80px;
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 143, 0, 0.1);
-
-    -webkit-animation: slideShine 3s infinite;
+ 	z-index: 9;
+ 	animation:movecolor 2s infinite;
+	-webkit-animation:movecolor 2s infinite; /*Safari and Chrome*/
  }
- @-webkit-keyframes slideShine {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
+ @keyframes movecolor
+{
+to {color: #ff9400;}
 }
+
+@-webkit-keyframes movecolor /*Safari and Chrome*/
+{
+to {color: #ff9400;}
+}
+ .round{
+ 	position: absolute;
+ 	width: 500px;
+ 	height: 500px;
+ 	border-radius:50% ;
+ 	line-height: 500px;
+ 	text-align: center;
+ 	background-color: #ff9400;
+ 	animation:mymove 5s infinite;
+	-webkit-animation:mymove 5s infinite; /*Safari and Chrome*/
+ }
+ @keyframes mymove
+{
+	40%{
+		width: 10px; height: 10px;
+		transform: translate(0px,0px);
+	}
+	60%{
+		width: 10px; height: 10px;
+		transform: translate(140px,10px);
+	}
+	80%{
+		width: 5px; height: 5px;
+		transform: translate(160px,0px);
+	}
+	100%{
+		width: 0px; height: 0px;
+		transform: translate(180px,10px);
+	}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+	40%{
+		width: 10px; height: 10px;
+		transform: translate(0px,0px);
+	}
+	60%{
+		width: 10px; height: 10px;
+		transform: translate(140px,10px);
+	}
+	80%{
+		width: 5px; height: 5px;
+		transform: translate(160px,0px);
+	}
+	100%{
+		width: 0px; height: 0px;
+		transform: translate(180px,10px);
+	}
+}
+
+// .preloader{
+// 	width: 100%;
+// 	height: 100%;
+//   display: flex;
+//   justify-content:center;
+//   align-items: center;
+//   padding: 10px;
+//  }
+//  .preloader_txt{
+//  	color: #ff9400;
+//  	font-size: 36px;
+//  	font-weight: 700;
+//  	background: #fff -webkit-linear-gradient(left, #fff, #ff9400) 0 0 no-repeat;
+//     -webkit-background-size: 80px;
+
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: rgba(255, 143, 0, 0.1);
+
+//     -webkit-animation: slideShine 3s infinite;
+//  }
+//  @-webkit-keyframes slideShine {
+//     0% {
+//         background-position: 0 0;
+//     }
+//     100% {
+//         background-position: 100% 100%;
+//     }
+// }
 
 
