@@ -22,6 +22,10 @@
   cursor: pointer;
 }
 .item .tipbg .tiptxt{
+	position: absolute; 
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 	width: 260px;
  	height: 260px;
  	border-radius:50% ;
@@ -31,6 +35,14 @@
  	opacity: 0;
  	text-align: center;
 } 
+.item .tipbg .tiptxt-s{
+	width: 160px;
+ 	height: 160px;
+}
+.item .tipbg .tiptxt-s .title{
+	margin-top: 65px;
+	font-size: 18px;
+}
 .item .tipbg .title{
 	margin-top: 110px;
 	font-size: 22px;
