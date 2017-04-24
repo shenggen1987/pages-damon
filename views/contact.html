@@ -44,7 +44,8 @@
 
 
 		var point = new BMap.Point(points[0], points[1]);
-        var myIcon = new BMap.Icon("http://banana001.w221.mc-test.com/Content/img/marker.png", new BMap.Size(48, 72));
+		//http://banana001.w221.mc-test.com/Content/img/marker.png
+        var myIcon = new BMap.Icon("/images/map_point.png", new BMap.Size(48, 72));
         var marker1 = new BMap.Marker(point, { icon: myIcon });  // 创建标注
      //   var marker1 = new BMap.Marker(point); 
      	map.setMapStyle({ style: 'dark' });
