@@ -24,13 +24,24 @@ a {
 // .nav li a{
 //   color: #ccc;
 // }
-
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
 .navbar{
 	margin-bottom: 0;
 	border-radius: 0;
-	    position: fixed;
-    width: 100%;
-    z-index: 99;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  padding: 10px 0 20px 0;
+}
+.navbar-nav{
+	margin-right: -30px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #000;
+    background-color: #fff;
 }
 .mian{
 	padding-top: 60px;
@@ -81,4 +92,7 @@ a {
 }
 .detail{
 	padding-bottom: 40px;
+}
+.footer{
+	padding: 40px 0;
 }

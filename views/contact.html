@@ -2,14 +2,18 @@
 	
 
  	<div class="row list-teams">
- 		<div class="col-xs-12 col-sm-12 col-md-12 team container1">
+ 		<div class="col-xs-12 col-sm-12 col-md-2">
+ 		</div>
+ 		<div class="col-xs-12 col-sm-12 col-md-8 team container1">
         <div id="allmap"></div>
     </div>
 
 	</div>
 
 	<div class="row info">
-	   	<div class="col-xs-12 col-sm-12 col-md-12 f1">
+			<div class="col-xs-12 col-sm-12 col-md-2">
+ 			</div>
+	   	<div class="col-xs-12 col-sm-12 col-md-8 f1">
 					<p><strong>本源品牌设计顾问</strong></p>
 					<p>___</p>
 					<p>&nbsp;</p>
@@ -43,6 +47,7 @@
         var myIcon = new BMap.Icon("http://banana001.w221.mc-test.com/Content/img/marker.png", new BMap.Size(48, 72));
         var marker1 = new BMap.Marker(point, { icon: myIcon });  // 创建标注
      //   var marker1 = new BMap.Marker(point); 
+     	map.setMapStyle({ style: 'dark' });
         map.addOverlay(marker1);              // 将标注添加到地图中
         // marker1.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
         var sContent =
