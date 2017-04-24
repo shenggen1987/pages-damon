@@ -4,7 +4,7 @@
 .item {   
   margin: 10px; 
   float: left;  
-  
+  background-color: #ff9400;
 } 
 .item .small{   
   width: 100%;  

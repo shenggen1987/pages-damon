@@ -78,6 +78,11 @@ a {
 .service .item .title{
 	font-size: 16px;
 }
+.banner-service{
+	background: url('/images/service_1.png') no-repeat center center;
+	width: 100%;
+	height:  599px;
+}
 
 
 #allmap{
