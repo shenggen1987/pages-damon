@@ -25,7 +25,10 @@
         {{/compare}}
         
         {{#each detail.images}}
-          <p><img src="/images/detail/{{../detail.id}}/{{this}}.jpg"/> </p>
+          {{#compare this '!=' '1'}}
+            <p><img src="/images/detail/{{../detail.id}}/{{this}}.jpg"/> </p>
+          {{/compare}}
+          
         {{/each}}
       </div>
 
@@ -34,3 +37,21 @@
   
 
 </div>
+{{#contentFor "footerJS"}}
+  <script src='//unpkg.com/masonry-layout@4.1.1/dist/masonry.pkgd.js'></script>
+  <script src='//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js'></script>
+  <script>
+    $(function(){   
+      resizeMethod(); 
+      $(window).resize(function() { 
+        resizeMethod();
+      });
+      function resizeMethod(){
+        var obj = $('.detail');
+        var left = obj.width() + obj.offset().left + 50;
+        $('.toolbar').css({'left': left + 'px', 'top': '118px', 'position': 'fixed'});
+      }
+
+    });  
+  </script>
+{{/contentFor}}

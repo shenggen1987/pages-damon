@@ -7,7 +7,6 @@ router.get('/:id', async function (ctx, next) {
 	arr.forEach(function(item){
 		if(item.id === ~~ctx.params.id){
 			detail = item;
-			detail.images.splice(0,1);
 		}
 	});
   ctx.state = {
