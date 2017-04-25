@@ -158,6 +158,32 @@ a {
 .detail .description{
 	line-height: 24px;
 }
+.case-title{
+	font-size: 20px;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 26px;
+}
+.case-list{
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+}
+.case-item{
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+}
+.case-item .title{
+	margin-top: 10px;
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+.case-item img{
+	width: 215px;
+	height: 133px;
+}
+.case-item a{
+	color: #333;
+}
 .footer{
 	padding: 40px 0;
 }

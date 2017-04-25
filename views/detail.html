@@ -31,7 +31,39 @@
           
         {{/each}}
       </div>
+      
+  </div>
 
+  <div class="row list-teams">
+      <div class="col-md-1"></div>
+      <div class="col-xs-12 col-sm-12 col-md-10 team case-title">
+        更多案例
+      </div>
+  </div>
+  {{#each detail.relatedList}}
+    {{#compare first '==' '1'}}
+     <div class="row list-teams">
+      <div class="col-md-1"></div>
+      <div class="col-xs-12 col-sm-12 col-md-10 team">
+        <div class="row case-list">
+    {{/compare}}
+    
+          <div class="col-xs-4 col-sm-4 col-md-4 case-item">
+            <a href="/detail/{{id}}"><img src="https://cdnimg.3dker.cn/f305568f92f292f04f98f6edf3bc5a9f@280w_280h_1e_90q.src" alt="{{title}}"></a>
+            <div class="mask">
+              <p class="title"><strong><a href="/detail/{{id}}">{{title}}</a></strong></p>
+              <p>{{service}}</p>
+            </div>
+          </div>
+    {{#compare last '==' '1'}}
+           </div>
+          </div>
+          
+      </div>
+    {{/compare}}
+
+  {{/each}}
+ 
       
   </div>
   
