@@ -141,6 +141,20 @@ a {
 	padding-top: 60px;
 	padding-bottom: 40px;
 }
+.detail .team{
+	position: relative;
+}
+.detail .toolbar{
+	position: absolute;
+	top: 0;
+  right: -55px;
+}
+.detail .toolbar a:hover{
+	text-decoration: none;
+}
+.detail .toolbar .icon-guanbi{
+	color: #000;
+}
 .footer{
 	padding: 40px 0;
 }
