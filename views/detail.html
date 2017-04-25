@@ -3,127 +3,34 @@
 {{/contentFor}}
 <div class="container detail">
 	
-	{{#compare id '==' '1'}}
-     {{> detail_01}}
-  {{/compare}}
+ 	<div class="row list-teams">
+      <div class="col-md-1"></div>
+      <div class="col-xs-12 col-sm-12 col-md-10 team">
+        <div class="toolbar">
+          <a href="/"><i class="iconfont icon-guanbi"></i></a>
+        </div>
+        <p><img src="/images/detail/{{detail.id}}/1.jpg"/> </p>
+        {{#compare detail.title '!=' ''}}
+           <div class="row">
+              <div class="col-sm-3 col-xs-5 col-lg-2 text-left">
+                  <p><strong>{{detail.title}}</strong></p>
+                  <p>-</p>
+                  <p><strong>客户 </strong>&nbsp;{{detail.customer}}</p>
+                  <p><strong>服务 </strong>&nbsp;{{detail.service}}</p>
+              </div>
+              <div class="col-sm-9 col-xs-7 col-lg-10 text-left description">
+                  {{detail.description}}
+              </div>
+          </div>
+        {{/compare}}
+        
+        {{#each detail.images}}
+          <p><img src="/images/detail/{{../detail.id}}/{{this}}.jpg"/> </p>
+        {{/each}}
+      </div>
 
-  {{#compare id '==' '2'}}
-     {{> detail_02}}
-  {{/compare}}
-
-  {{#compare id '==' '3'}}
-     {{> detail_03}}
-  {{/compare}}
-
-  {{#compare id '==' '4'}}
-     {{> detail_04}}
-  {{/compare}}
-
-  {{#compare id '==' '5'}}
-     {{> detail_05}}
-  {{/compare}}
-
-  {{#compare id '==' '6'}}
-     {{> detail_06}}
-  {{/compare}}
-  
-  {{#compare id '==' '7'}}
-     {{> detail_07}}
-  {{/compare}}
-
-	{{#compare id '==' '8'}}
-     {{> detail_08}}
-  {{/compare}}
-
-	{{#compare id '==' '9'}}
-     {{> detail_09}}
-  {{/compare}}
-
-  {{#compare id '==' '10'}}
-     {{> detail_10}}
-  {{/compare}}
-
-  {{#compare id '==' '11'}}
-     {{> detail_11}}
-  {{/compare}}
-	
-	{{#compare id '==' '12'}}
-     {{> detail_12}}
-  {{/compare}}
-
-  {{#compare id '==' '13'}}
-     {{> detail_13}}
-  {{/compare}}
-
-  {{#compare id '==' '14'}}
-     {{> detail_14}}
-  {{/compare}}
-
-  {{#compare id '==' '15'}}
-     {{> detail_15}}
-  {{/compare}}
-
-  {{#compare id '==' '16'}}
-     {{> detail_16}}
-  {{/compare}}
-
-  {{#compare id '==' '17'}}
-     {{> detail_17}}
-  {{/compare}}
-
-  {{#compare id '==' '18'}}
-     {{> detail_18}}
-  {{/compare}}
-
-  {{#compare id '==' '19'}}
-     {{> detail_19}}
-  {{/compare}}
-  
-  {{#compare id '==' '20'}}
-     {{> detail_20}}
-  {{/compare}}
-
-  {{#compare id '==' '21'}}
-     {{> detail_21}}
-  {{/compare}}
-
-  {{#compare id '==' '22'}}
-     {{> detail_22}}
-  {{/compare}}
-
-  {{#compare id '==' '23'}}
-     {{> detail_23}}
-  {{/compare}}
-
-  {{#compare id '==' '24'}}
-     {{> detail_24}}
-  {{/compare}}
-
-  {{#compare id '==' '25'}}
-     {{> detail_25}}
-  {{/compare}}
-
-	{{#compare id '==' '26'}}
-     {{> detail_26}}
-  {{/compare}}
-
-  {{#compare id '==' '27'}}
-     {{> detail_27}}
-  {{/compare}}
-  
-  {{#compare id '==' '28'}}
-     {{> detail_28}}
-  {{/compare}}
-
-  {{#compare id '==' '29'}}
-     {{> detail_29}}
-  {{/compare}}
-
-  {{#compare id '==' '30'}}
-     {{> detail_30}}
-  {{/compare}}
-	
- 	
+      
+  </div>
   
 
 </div>

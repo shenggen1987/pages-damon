@@ -155,6 +155,9 @@ a {
 .detail .toolbar .icon-guanbi{
 	color: #000;
 }
+.detail .description{
+	line-height: 24px;
+}
 .footer{
 	padding: 40px 0;
 }
