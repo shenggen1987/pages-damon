@@ -1,0 +1,17 @@
+<div id="container" class="container">    
+ 	<div class="col-xs-12 col-sm-12 col-md-12 ">
+
+					{{#each list}}
+						<div class="item {{className}}"><a href="/detail/{{id}}"><img class="small" src="/images/index_{{indexNo}}.png?v=222"></a>
+						<div class="tipbg" data-url='/detail/{{id}}'>
+							<div class="tiptxt {{tipClassName}}">
+								<p class="title"><strong>{{title}}</strong> </p>
+								<p class="txt"><strong>{{service}}</strong></p>
+							</div>
+						</div>
+        	 </div> 
+					{{/each}}
+
+ </div>
+
+</div> 

@@ -1,0 +1,47 @@
+<script src='//unpkg.com/masonry-layout@4.1.1/dist/masonry.pkgd.js'></script>
+	<script src='//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js'></script>
+  <script>
+		$(function(){    
+		  // $("body").css("overflow", "auto");
+
+			setTimeout(function(){
+				
+				// $("body").removeClass("o-hide");
+				$('.animation').remove();
+				var isLoading = false;
+
+				f_masonry();
+				$("img").lazyload({
+					effect:"fadeIn",
+					failurelimit:40,
+					load:f_masonry,
+				});
+
+				function f_masonry() {
+					function detectmob() {
+		          return navigator.userAgent.match(/Android/i)
+		                  || navigator.userAgent.match(/webOS/i)
+		                  || navigator.userAgent.match(/iPhone/i)
+		                  || navigator.userAgent.match(/BlackBerry/i)
+		                  || navigator.userAgent.match(/Windows Phone/i);
+		      }
+		      if (detectmob()) {
+		        $('#container').masonry({singleMode: true,animate: true,itemSelector:'.item'}); 
+		      }else{
+		      	$('#container').masonry({singleMode: true,animate: true,itemSelector:'.item', isFitWidth: true, columnWidth: 200});  
+		      }
+		      if(!isLoading){
+		      	$(".pre-loading").hide();
+		      	isLoading = true;
+		      }
+				}
+				
+				$('.tipbg').on('click', function(e){  
+						var obj = $(e.currentTarget);
+						location.href = obj.data('url'); 
+				}); 
+
+			}, 1500);
+
+		});  
+	</script>

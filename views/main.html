@@ -12,13 +12,14 @@
 		{{/block}}
   </head>
   <body>
-  	<div class="pre-loading">
+  	<!-- <div class="pre-loading">
   		<div class="preloader ">
 			 <span class="preloader_txt">ORIGIN 本原设计</span>
 			 <div class="round"></div>
 			</div>
-  	</div>
-		
+  	</div> -->
+		{{#block "animation"}}
+		{{/block}}
 		<nav class="navbar navbar-default">
 		  <div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -39,9 +40,17 @@
 		      <ul class="nav navbar-nav pull-right" id="menu">
 		       
 						{{#compare pageName '==' 'index'}}
-					     <li class="active"><a href="#">案例 <span class="sr-only">(current)</span></a></li>
+					     <li class="active"><a href="#">案例 <span class="sr-only">(current)</span></a>
+									
+					     </li>
 					     {{else}}
-					     <li><a href="/">案例</a></li>
+					     <li><a href="/" class="cases">案例</a>
+			               <!--  <div class="subnav">
+			                    <a href="#">全部</a>
+			                    <a href="#">品牌</a>
+			                    <a href="#">包装</a>
+			                </div> -->
+					     </li>
 					 {{/compare}}
 		        <!-- <li><a href="#">案例</a></li> -->
 				    {{#compare pageName '==' 'about'}}

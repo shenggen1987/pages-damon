@@ -16,7 +16,7 @@ const contact = require('./routes/contact');
 const detail = require('./routes/detail');
 
 const users = require('./routes/users');
-
+const cases = require('./routes/cases');
 // middlewares
 app.use(convert(bodyparser));
 app.use(convert(json()));
@@ -81,6 +81,7 @@ router.use('/service', service.routes(), index.allowedMethods());
 router.use('/contact', contact.routes(), index.allowedMethods());
 router.use('/users', users.routes(), users.allowedMethods());
 router.use('/detail', detail.routes(), detail.allowedMethods());
+router.use('/cases', cases.routes(), cases.allowedMethods());
 app.use(router.routes(), router.allowedMethods());
 // response
 

@@ -95,6 +95,9 @@ a {
 .about .container1 img{
 	width: 100%;
 }
+.about{
+	font-size: 13px;
+}
 .service .container1{
 	margin-bottom: 40px;
 }
@@ -103,7 +106,7 @@ a {
 }
 .service .item{
 	margin-top: 30px;
-	font-size: 12px;
+	font-size: 13px;
 }
 .service .item .title{
 	font-size: 20px;
@@ -186,4 +189,24 @@ a {
 }
 .footer{
 	padding: 40px 0;
+	font-size: 11px;
 }
+
+// .cases{ display: inline-block!important;}
+// .subnav{
+// 	display: inline-block;
+// 	overflow: hidden;
+// 	height: 24px;
+// 	// text-align: right;
+// 	width: 0px;
+// }
+// // .subnav a{ 
+// // 	 color: #333;
+// // }
+// .cases:hover+ .subnav{
+//   transition: all 1s;
+//   width: 150px;
+// }
+
+
+
