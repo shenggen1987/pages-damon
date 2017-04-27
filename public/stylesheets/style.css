@@ -34,7 +34,8 @@ a {
   position: fixed;
   width: 100%;
   z-index: 99;
-  padding: 10px 0 20px 0;
+  padding: 20px 0 20px 0;
+  font-size: 15px;
 }
 .navbar-nav{
 	margin-right: -30px;
@@ -47,6 +48,9 @@ a {
 	padding-top: 60px;
 }
 
+.banner-img{
+	margin-top: 88px;
+}
 /*** about **/
 .about .banner{
 	width: 100%;
@@ -71,10 +75,10 @@ a {
 	// 	width: 704px;
 	// 	margin: 0 auto;
 	// }
-	.about .container1 img{
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
+	// .about .container1 img{
+	// 	padding-top: 60px;
+	// 	padding-bottom: 60px;
+	// }
 	.contact .list-teams{
 		padding-top: 50px;
 	}
@@ -101,18 +105,28 @@ a {
 .service .container1{
 	margin-bottom: 40px;
 }
-.service{
-	padding-bottom: 40px;
+.service, .about{
+	padding-bottom: 150px;
 }
 .service .item{
 	margin-top: 30px;
 	font-size: 13px;
 }
-.service .item .title{
+.service .service-top{
+	margin-top: 145px;
+}
+.service .item .title, .about .item .title{
 	font-size: 20px;
 }
-.service .item .item-txt{
-	line-height: 22px;
+.about .item {
+	margin-top: 60px;
+}
+.about .item .title{
+	margin-left: -15px;
+}
+.service .item .item-txt, .about .item .item-txt{
+	font-size: 13px;
+	line-height: 24px;
 }
 .banner-service{
 	background: url('/images/service_2.png') no-repeat center center;
