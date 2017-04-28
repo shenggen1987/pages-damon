@@ -37,19 +37,23 @@
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav pull-right" id="menu">
+		      <ul class="nav navbar-nav" id="menu">
 		       
 						{{#compare pageName '==' 'index'}}
-					     <li class="active"><a href="#">案例 <span class="sr-only">(current)</span></a>
-									
+					     <li class="active cases1"><a href="#" class="cases">案例 <span class="sr-only">(current)</span></a>
+									<div class=" subnav">
+			                    <a href="/cases">全部</a>
+			                    <a href="/cases">品牌</a>
+			                    <a href="/cases">包装</a>
+			               </div>
 					     </li>
 					     {{else}}
-					     <li class="dropdown"><a href="/" class="dropdown-toggle cases" data-toggle="dropdown">案例</a>
-			              <ul class="dropdown-menu subnav">
-			                    <li><a href="/cases">全部</a></li>
-			                    <li><a href="/cases">品牌</a></li>
-			                    <li><a href="/cases">包装</a></li>
-			               </ul>
+					     <li class="dropdown cases1"><a href="/" class="dropdown-toggle cases" data-toggle="dropdown">案例</a>
+			              <div class=" subnav">
+			                    <a href="/cases">全部</a>
+			                    <a href="/cases?category=1">品牌</a>
+			                    <a href="/cases?category=2">包装</a>
+			               </div>
 					     </li>
 					 {{/compare}}
 		        <!-- <li><a href="#">案例</a></li> -->
@@ -94,4 +98,11 @@
   <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
  	{{#block "footerJS"}}
 	{{/block}}
+	<script type="text/javascript">
+		// $('.nav .cases').mouseenter(function(){
+		//   $(this).closest('.nav').find('.subnav').css({ 'width': '100px'});
+		// }).mouseleave(function(){
+		//   $(this).closest('.nav').find('.subnav').css({ 'width': '0'});
+		// });
+	</script>
 </html>
