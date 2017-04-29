@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/stylesheets/reset.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_agla8srl0xxn7b9.css">
     {{#block "headerCSS"}}
 		{{/block}}
   </head>
@@ -48,7 +49,7 @@
 			               </div>
 					     </li>
 					     {{else}}
-					     <li class="dropdown cases1"><a href="/" class="dropdown-toggle cases" data-toggle="dropdown">案例</a>
+					     <li class=" cases1"><a href="/" class=" cases">案例</a>
 			              <div class=" subnav">
 			                    <a href="/cases">全部</a>
 			                    <a href="/cases?category=1">品牌</a>
@@ -58,21 +59,21 @@
 					 {{/compare}}
 		        <!-- <li><a href="#">案例</a></li> -->
 				    {{#compare pageName '==' 'about'}}
-					     <li class="active"><a href="#">关于 <span class="sr-only">(current)</span></a></li>
+					     <li class="active"><a href="#"><i class="iconfont icon-infenicon17"></i>关于 <span class="sr-only">(current)</span></a></li>
 					     {{else}}
-					     <li><a href="/about">关于</a></li>
+					     <li><a href="/about"><i class="iconfont icon-infenicon17"></i>关于</a></li>
 					 {{/compare}}
 
 					 {{#compare pageName '==' 'service'}}
-					     <li class="active"><a href="#">服务 <span class="sr-only">(current)</span></a></li>
+					     <li class="active"><a href="#"><i class="iconfont icon-infenicon17"></i>服务 <span class="sr-only">(current)</span></a></li>
 					     {{else}}
-					     <li><a href="/service">服务</a></li>
+					     <li><a href="/service"><i class="iconfont icon-infenicon17"></i>服务</a></li>
 					 {{/compare}}
 
 					 {{#compare pageName '==' 'contact'}}
-					     <li class="active"><a href="#">联系 <span class="sr-only">(current)</span></a></li>
+					     <li class="active"><a href="#"><i class="iconfont icon-infenicon17"></i>联系 <span class="sr-only">(current)</span></a></li>
 					     {{else}}
-					     <li><a href="/contact">联系</a></li>
+					     <li><a href="/contact"><i class="iconfont icon-infenicon17"></i>联系</a></li>
 					 {{/compare}}
 				    
 		      </ul>
@@ -83,7 +84,7 @@
 		<div class="mian">
 			{{{body}}}
 		</div>
-		<div class="container footer">
+		<!-- <div class="container footer">
 			
 			<div class="row copyright">
           <div class="col-sm-12 text-right">
@@ -92,7 +93,8 @@
           
       </div>
 		 	
-		</div>
+		</div> -->
+		
   </body>
   <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
   <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
